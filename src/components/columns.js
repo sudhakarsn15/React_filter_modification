@@ -6,16 +6,24 @@ export const COLUMNS = [
     Header: "Id",
     accessor: "id",
     Filter: ColumnFilter,
-    disableFilters: true
+    disableFilters: true,
+  },
+  {
+    Header: "Country",
+    accessor: "country",
+    // Filter: ColumnFilter,
   },
   {
     Header: "First Name",
-    accessor: "first_name"
+    accessor: "first_name",
+    disableFilters: true,
     // Filter: ColumnFilter
   },
   {
     Header: "Last Name",
-    accessor: "last_name"
+    accessor: "last_name",
+    disableFilters: true,
+
     // Filter: ColumnFilter
   },
   {
@@ -23,54 +31,54 @@ export const COLUMNS = [
     accessor: "date_of_birth",
     Cell: ({ value }) => {
       return format(new Date(value), "dd/MM/yyyy");
-    }
+    },
+    disableFilters: true,
+
     // Filter: ColumnFilter
   },
-  {
-    Header: "Country",
-    accessor: "country"
-    // Filter: ColumnFilter
-  },
+
   {
     Header: "Phone",
-    accessor: "phone"
+    accessor: "phone",
+    disableFilters: true,
+
     // Filter: ColumnFilter
-  }
+  },
 ];
 
 export const GROUPED_COLUMNS = [
   {
     Header: "Id",
-    accessor: "id"
+    accessor: "id",
   },
   {
     Header: "Name",
     columns: [
       {
         Header: "First Name",
-        accessor: "first_name"
+        accessor: "first_name",
       },
       {
         Header: "Last Name",
-        accessor: "last_name"
-      }
-    ]
+        accessor: "last_name",
+      },
+    ],
   },
   {
     Header: "Info",
     columns: [
       {
         Header: "Date fo Birth",
-        accessor: "date_of_birth"
+        accessor: "date_of_birth",
       },
       {
         Header: "Country",
-        accessor: "country"
+        accessor: "country",
       },
       {
         Header: "Phone",
-        accessor: "phone"
-      }
-    ]
-  }
+        accessor: "phone",
+      },
+    ],
+  },
 ];
